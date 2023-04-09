@@ -245,21 +245,6 @@ $EndComp
 Wire Wire Line
 	2600 2200 2250 2200
 $Comp
-L Device:Crystal_GND24_Small Y1
-U 1 1 64395BCE
-P 2050 1700
-F 0 "Y1" V 2004 1844 50  0000 L CNN
-F 1 "16MHz" V 2095 1844 50  0000 L CNN
-F 2 "" H 2050 1700 50  0001 C CNN
-F 3 "~" H 2050 1700 50  0001 C CNN
-	1    2050 1700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2600 1600 2050 1600
-Wire Wire Line
-	2600 1800 2050 1800
-$Comp
 L Device:C_Small C3
 U 1 1 64398433
 P 1500 1550
@@ -282,15 +267,9 @@ F 3 "~" H 1500 1900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2050 1800 1600 1800
-Wire Wire Line
 	1600 1800 1600 1900
-Connection ~ 2050 1800
-Wire Wire Line
-	2050 1600 1600 1600
 Wire Wire Line
 	1600 1600 1600 1550
-Connection ~ 2050 1600
 Wire Wire Line
 	1400 1550 1400 1900
 $Comp
@@ -307,16 +286,9 @@ $EndComp
 Wire Wire Line
 	1400 1900 1400 2050
 Connection ~ 1400 1900
-Wire Wire Line
-	1950 1700 1950 2050
-Wire Wire Line
-	1950 2050 1400 2050
 Connection ~ 1400 2050
 Wire Wire Line
 	2150 1700 2150 2050
-Wire Wire Line
-	2150 2050 1950 2050
-Connection ~ 1950 2050
 $Comp
 L Switch:SW_Push SW1
 U 1 1 643A5CD5
@@ -566,4 +538,32 @@ Text GLabel 6050 3550 0    50   Input ~ 0
 ROW0
 Text GLabel 6050 4200 0    50   Input ~ 0
 ROW1
+Wire Wire Line
+	1600 1600 2050 1600
+Wire Wire Line
+	1600 1800 2050 1800
+Wire Wire Line
+	1400 2050 1950 2050
+$Comp
+L Device:Crystal_GND24_Small Y1
+U 1 1 6440020C
+P 2050 1700
+F 0 "Y1" V 2004 1844 50  0000 L CNN
+F 1 "Crystal_GND24_Small" V 2095 1844 50  0000 L CNN
+F 2 "" H 2050 1700 50  0001 C CNN
+F 3 "~" H 2050 1700 50  0001 C CNN
+	1    2050 1700
+	0    1    1    0   
+$EndComp
+Connection ~ 2050 1600
+Wire Wire Line
+	2050 1600 2600 1600
+Connection ~ 2050 1800
+Wire Wire Line
+	2050 1800 2600 1800
+Wire Wire Line
+	1950 1700 1950 2050
+Connection ~ 1950 2050
+Wire Wire Line
+	1950 2050 2150 2050
 $EndSCHEMATC
